@@ -19,11 +19,11 @@
 
 以下のコマンドを実行
 ```
-sh start.sh
+make up
 ```
 
 # MySQLサーバーの停止
 
 ```
-sh stop.sh
+make down
 ```
