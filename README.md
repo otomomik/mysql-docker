@@ -10,10 +10,7 @@
 
 - MySQL
   - 5.7
-  - 8.0
-- phpMyAdmin
   - latest
-※ phpMyAdminにアクセスする際は `.env` の`MYSQL_ROOT_PASSWORD` をパスワードとして使用する
 
 # MySQLサーバーの起動
 

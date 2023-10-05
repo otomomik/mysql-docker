@@ -1,41 +1,24 @@
 version: "3.8"
 
 services:
-  mysql_8_0_32:
+  mysql_latest:
     platform: linux/amd64
-    image: mysql:8.0.32
+    image: mysql:latest
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
       TZ: Asia/Tokyo
     volumes:
-      - ./data/mysql/8.0.32:/var/lib/mysql
+      - ./data/mysql/latest:/var/lib/mysql
 
-  mysql_5_7_40:
+  mysql_5_7_43:
     platform: linux/amd64
-    image: mysql:5.7.40
+    image: mysql:5.7.43
     ports:
-      - "3307:3306"
+      - "5743:3306"
     environment:
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
       TZ: Asia/Tokyo
     volumes:
-      - ./data/mysql/5.7.40:/var/lib/mysql
-  phpmyadmin_8_0_32:
-    image: phpmyadmin/phpmyadmin:latest
-    environment:
-      PMA_HOST: 'mysql_8_0_32'
-    ports:
-      - "5506:80"
-    volumes:
-      - ./data/phpmyadmin/8.0.32:/sessions
-  phpmyadmin_5_7_40:
-    image: phpmyadmin/phpmyadmin:latest
-    environment:
-      PMA_HOST: 'mysql_5_7_40'
-    ports:
-      - "5507:80"
-    volumes:
-      - ./data/phpmyadmin/5.7.40:/sessions
-
+      - ./data/mysql/5.7.43:/var/lib/mysql
